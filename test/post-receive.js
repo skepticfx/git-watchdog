@@ -2,7 +2,7 @@ var request = require('supertest');
 var should = require('should');
 var app = require('../app');
 
-app = "http://localhost:3000";
+//app = "http://localhost:3000";
 
 var payload = require('./payload.json');
 

@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var different = require('different');
 var debug = require('debug')('hook');
+var secTests = require('../security-tests/');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -16,15 +17,14 @@ router.post('/', function(req, res) {
   result.request = req.body;
   var commit;
   
-  debug('Got POST request');
-  
   if(req.body.head_commit){
-    debug('found head commit');
     commit = req.body.head_commit;    
     debug(commit.url.toString() +'.diff');
     different.parseDiffFromUrl(commit.url.toString() +'.diff', function(diff) { 
       console.log(diff);
       result.diff = diff;
+      // Asynchronously run the tests
+      secTests.run(diff);
       res.json(200, result);
     });
     
