@@ -15,7 +15,7 @@ exports.scan = function(diff){
       return;
     file.additions.forEach(function(addition){
       if(addition.match(/<%-/gi) !== null){
-        event.report('XSS in ' + addition);
+        event.emit('report', 'XSS in ' + addition);
       }
     });
   });
