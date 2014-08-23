@@ -2,9 +2,11 @@ var request = require('supertest');
 var should = require('should');
 var app = require('../app');
 
+app = "http://localhost:3000";
+
 var payload = require('./payload.json');
 
-describe('post-recieve', function(){
+describe('post-receive', function(){
   it('simple github test', function(done){
     request(app)
       .post('/')
@@ -13,7 +15,6 @@ describe('post-recieve', function(){
         should.not.exist(err)
         res.should.be.json
         res.body.success.should.be.exactly(true)
-        console.log(res.body)
         done()
       })
   })
