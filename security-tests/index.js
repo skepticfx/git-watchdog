@@ -2,18 +2,17 @@ var xss = require('./xss.js');
 var request = require('request');
 var reportUrl = "http://requestb.in/vlxc0jvl?data=";
 
+function report(data){
+  console.log('report received');
+  console.log(data);
+  request(reportUrl +  encodeURIComponent(data).toString());
+}
 
-// Run the tests individually and async
 exports.run = function(diff){
- 
-  var xssScanner = xss.scan(diff);
-  console.log(xssScanner);
-  xssScanner.on('report', function(data){
-    console.log('report received');
-    console.log(data);
-    request(reportUrl +  encodeURIComponent(data).toString());
-  })
 
+   xss.scan(diff, report);
+
+return;
 }
 
 
