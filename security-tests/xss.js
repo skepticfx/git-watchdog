@@ -11,10 +11,12 @@ exports.scan = function(diff){
   var event = new events.EventEmitter();
   diff.forEach(function(file){
     // Only interested in files with .ejs as extension
-    if(file.name.toString().split('.').pop() !== 'ejs')
+    if(file.fileExtension !== 'ejs')
       return;
     file.additions.forEach(function(addition){
+      console.log('File extension with ejs found');
       if(addition.match(/<%-/gi) !== null){
+        console.log('Compare: ' + addition.match(/<%-/gi));
         event.emit('report', 'XSS in ' + addition);
       }
     });

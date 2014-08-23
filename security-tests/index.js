@@ -5,13 +5,8 @@ var reportUrl = "http://requestb.in/vlxc0jvl?data=";
 
 // Run the tests individually and async
 exports.run = function(diff){
-  diff = diff.map(function(x){
-    x.name = x.b;
-    return x;
-  });
-  
+ 
   var xssScanner = xss.scan(diff);
-  console.log(xssScanner);
   xssScanner.on('report', function(data){
     console.log('report received');
     console.log(data);
