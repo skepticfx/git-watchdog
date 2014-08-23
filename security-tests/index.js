@@ -13,7 +13,6 @@ exports.run = function(diff){
     request(reportUrl +  encodeURIComponent(data).toString());
   })
 
-return;
 }
 
 
