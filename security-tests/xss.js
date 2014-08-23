@@ -18,6 +18,7 @@ exports.scan = function(diff){
       if(addition.match(/<%-/gi) !== null){
         console.log('Compare: ' + addition.match(/<%-/gi));
         event.emit('report', 'XSS in ' + addition);
+        event.lol = 'test';
       }
     });
   });

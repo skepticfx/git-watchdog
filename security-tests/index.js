@@ -7,6 +7,7 @@ var reportUrl = "http://requestb.in/vlxc0jvl?data=";
 exports.run = function(diff){
  
   var xssScanner = xss.scan(diff);
+  console.log(xssScanner);
   xssScanner.on('report', function(data){
     console.log('report received');
     console.log(data);
