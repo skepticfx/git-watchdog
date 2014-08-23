@@ -11,7 +11,9 @@ exports.run = function(diff){
   });
   
   var xssScanner = xss.scan(diff);
+  console.log(xssScanner);
   xssScanner.on('report', function(data){
+    console.log('report received');
     console.log(data);
     request(reportUrl +  encodeURIComponent(data).toString());
   })
