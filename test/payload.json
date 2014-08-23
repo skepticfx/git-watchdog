@@ -1,0 +1,27 @@
+{
+  "zen": "Keep it logically awesome.",
+  "hook": {
+    "url": "https://api.github.com/repos/blah",
+    "test_url": "https://api.github.com/repos/blah",
+    "id": 12345,
+    "name": "web",
+    "active": true,
+    "events": [
+      "push"
+    ],
+    "config": {
+      "secret": "",
+      "url": "http://git-watchdog.skepticfx.com/",
+      "content_type": "json",
+      "insecure_ssl": "0"
+    },
+    "last_response": {
+      "code": null,
+      "status": "unused",
+      "message": null
+    },
+    "updated_at": "2014-08-23T18:55:01Z",
+    "created_at": "2014-08-23T18:55:01Z"
+  },
+  "hook_id": 12345
+}

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Git Watchdog</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Git Watchdog</h1>
+    <p>I collect post-receive @ http://git-watchdog.skepticfx.com/</p>
+    <ol>
+    <li>Go to your Github repo.</li>
+    <li>Add a WebHook for the push event, under <Your-github-repo-url>/settings/hooks/new</li>
+    <li>Set the Payload URL as, http://git-watchdog.skepticfx.com/</li>
+    <li>Select, 'Just the push event' </li>
+    </ol>
   </body>
 </html>
