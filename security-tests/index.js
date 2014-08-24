@@ -3,6 +3,7 @@ var request = require('request');
 var reportUrl = "http://requestb.in/vlxc0jvl?data=";
 
 function report(data){
+  // Use email, in-house logging server etc here
   console.log('report received');
   console.log(data);
   request(reportUrl +  encodeURIComponent(data).toString());

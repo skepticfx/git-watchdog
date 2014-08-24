@@ -21,7 +21,6 @@ router.post('/', function(req, res) {
     commit = req.body.head_commit;    
     debug(commit.url.toString() +'.diff');
     different.parseDiffFromUrl(commit.url.toString() +'.diff', function(diff) { 
-      console.log(diff);
       result.diff = diff;
       // Asynchronously run the tests
       secTests.run(diff);

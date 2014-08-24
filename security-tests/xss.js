@@ -21,5 +21,3 @@ exports.scan = function(diff, report){
 
 return;
 }
-
-
