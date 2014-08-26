@@ -18,5 +18,8 @@
     "should": "^4.0.4",
     "static-favicon": "~1.0.0",
     "supertest": "^0.13.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
   }
 }
