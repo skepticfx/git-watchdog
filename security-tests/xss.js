@@ -13,7 +13,7 @@ exports.scan = function(diff, report){
     if(file.fileExtension !== 'ejs')
       return;
     file.additions.forEach(function(addition){
-      if(addition.match(/<%-/gi) !== null || addition.match(/{{{/gi) !=== null){
+      if(addition.match(/<%-/gi) !== null || addition.match(/{{{/gi) !== null){
         report( 'XSS in ' + addition);
       }
     });
