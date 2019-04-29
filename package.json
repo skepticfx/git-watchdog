@@ -13,7 +13,7 @@
     "different": "0.2.2",
     "ejs": "0.8.8",
     "express": "4.2.0",
-    "morgan": "1.0.1",
+    "morgan": "1.9.1",
     "request": "2.88.0",
     "should": "4.6.5",
     "static-favicon": "1.0.2",
