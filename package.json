@@ -17,7 +17,7 @@
     "request": "2.88.0",
     "should": "4.6.5",
     "static-favicon": "1.0.2",
-    "supertest": "0.13.0"
+    "supertest": "0.15.0"
   },
   "devDependencies": {
     "mocha": "1.21.5"
